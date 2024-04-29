@@ -20,12 +20,12 @@ public class Parser {
                 return o1.getName().compareTo(o2.getName());
             }
         });
-        for (int i=0;i<countries.size();i++){
-            System.out.print(i+1+": "+"Country Name: " + sortedByName.get(i).getName());
-            System.out.print(" Country Capital: " + sortedByName.get(i).getCapital());
-            System.out.print(" Country Population: " + sortedByName.get(i).getPopulation());
-            System.out.println(" Country Area: " + sortedByName.get(i).getArea());
-        }
+//        for (int i=0;i<countries.size();i++){
+//            System.out.print(i+": "+"Country Name: " + sortedByName.get(i).getName());
+//            System.out.print(" Country Capital: " + sortedByName.get(i).getCapital());
+//            System.out.print(" Country Population: " + sortedByName.get(i).getPopulation());
+//            System.out.println(" Country Area: " + sortedByName.get(i).getArea());
+//        }
 
         return  sortedByName;
     }
@@ -37,15 +37,15 @@ public class Parser {
         Collections.sort(sortedByPopulation, new Comparator<Country>() {
             @Override
             public int compare(Country o1, Country o2) {
-                return Integer.valueOf(o1.getPopulation()).compareTo(o2.getPopulation());
+                return Integer.valueOf(o2.getPopulation()).compareTo(o1.getPopulation());
             }
         });
-        for (int i=0;i<countries.size();i++){
-            System.out.print(i+1+": "+"Country Name: " + sortedByPopulation.get(i).getName());
-            System.out.print(" Country Capital: " + sortedByPopulation.get(i).getCapital());
-            System.out.print(" Country Population: " + sortedByPopulation.get(i).getPopulation());
-            System.out.println(" Country Area: " + sortedByPopulation.get(i).getArea());
-        }
+//        for (int i=0;i<countries.size();i++){
+//            System.out.print(i+": "+"Country Name: " + sortedByPopulation.get(i).getName());
+//            System.out.print(" Country Capital: " + sortedByPopulation.get(i).getCapital());
+//            System.out.print(" Country Population: " + sortedByPopulation.get(i).getPopulation());
+//            System.out.println(" Country Area: " + sortedByPopulation.get(i).getArea());
+//        }
 
         return sortedByPopulation;
     }
@@ -57,15 +57,15 @@ public class Parser {
         Collections.sort(sortedByArea, new Comparator<Country>() {
             @Override
             public int compare(Country o1, Country o2) {
-                return Double.valueOf(o1.getArea()).compareTo(o2.getArea());
+                return Double.valueOf(o2.getArea()).compareTo(o1.getArea());
             }
         });
-        for (int i=0;i<countries.size();i++){
-                System.out.print(i+1+": "+"Country Name: " + sortedByArea.get(i).getName());
-                System.out.print(" Country Capital: " + sortedByArea.get(i).getCapital());
-                System.out.print(" Country Population: " + sortedByArea.get(i).getPopulation());
-                System.out.println(" Country Area: " + sortedByArea.get(i).getArea());
-        }
+//        for (int i=0;i<countries.size();i++){
+//                System.out.print(i+": "+"Country Name: " + sortedByArea.get(i).getName());
+//                System.out.print(" Country Capital: " + sortedByArea.get(i).getCapital());
+//                System.out.print(" Country Population: " + sortedByArea.get(i).getPopulation());
+//                System.out.println(" Country Area: " + sortedByArea.get(i).getArea());
+//        }
 
         return sortedByArea;
     }
@@ -104,7 +104,7 @@ public class Parser {
     public static void main(String[] args) throws IOException {
         //you can test your code here before you run the unit tests ;)
         setUp();
-//        sortByArea();
+        sortByArea();
 //        sortByName();
 //        sortByPopulation();
 
